@@ -1,7 +1,9 @@
 # Laboratorio Día 1: Usuarios y Grupos
 
+
 ## Objetivo
 Aprender a crear, modificar y eliminar usuarios y grupos en Linux, y entender la diferencia entre grupo primario y grupos secundarios.
+
 
 ## Comandos utilizados
 - `id`, `groups`, `users`
@@ -9,6 +11,7 @@ Aprender a crear, modificar y eliminar usuarios y grupos en Linux, y entender la
 - `adduser`, `deluser`
 - `usermod`, `groupadd`, `groupdel`
 - `passwd`, `chsh`
+
 
 ## Actividades realizadas
 1. Exploración de archivos del sistema:
