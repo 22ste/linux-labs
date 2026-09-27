@@ -31,8 +31,3 @@
    chmod 744 ejemplo.txt
    ls -l ejemplo.txt
 
-
-7. Cambiar propietario y grupo de un archivo.
-   sudo chown alice ejemplo.txt
-   sudo chgrp developers ejemplo.txt
-   ls -l ejemplo.txt
