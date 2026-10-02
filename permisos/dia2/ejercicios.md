@@ -6,7 +6,8 @@
    chmod g-r ejemplo.txt
 
    chmod o= ejemplo.txt
-   
+
+   -----------------------------------------
 
 2. Dar permisos específicos:
 
@@ -16,6 +17,7 @@
 
    chown y chgrp
 
+------------------------------------------
 
 3. Cambiar propietario y grupo:
 
@@ -23,6 +25,7 @@
 
    ls -l ejemplo.txt
 
+------------------------------------------
 
 4. Setuid
 Crear un script y activar setuid:
@@ -31,6 +34,7 @@ Crear un script y activar setuid:
 
    ls -l script_uid.sh
 
+-----------------------------------------
 
 5. Setgid
 Crear directorio grupo_demo y activar setgid:
@@ -41,24 +45,38 @@ Crear directorio grupo_demo y activar setgid:
 
    ls -ld grupo_demo
 
+------------------------------------------
 
 6. Crear archivo dentro y verificar grupo:
-cd grupo_demo
-touch archivo.txt
-ls -l archivo.txt
 
+   cd grupo_demo
 
-10. Sticky Bit
+   touch archivo.txt
+
+   ls -l archivo.txt
+
+-----------------------------------------
+
+7. Sticky Bit
 Crear directorio sticky_demo y activar sticky bit:
+
    mkdir sticky_demo
+
    chmod 777 sticky_demo
+
    chmod +t sticky_demo
+
    ls -ld sticky_demo
 
+-------------------------------------------
 
-11. Probar con usuarios distintos (labs y bob):
+8. Probar con usuarios distintos (labs y bob):
+
    cd sticky_demo
+
    touch archivo_labs.txt
+   
+## Ejercicio 8 terminado
 
    su bob
    cd /ruta/a/sticky_demo
