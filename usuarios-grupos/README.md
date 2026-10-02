@@ -32,8 +32,3 @@ Aprender a crear, modificar y eliminar usuarios y grupos en Linux, y entender la
 - Los archivos creados pertenecen al grupo primario del usuario.
 - Los grupos secundarios otorgan permisos adicionales, visibles tras reiniciar sesión.
 - El usuario `alice` pertenece al grupo `developers`.
-
-## Qué aprendí
-- El grupo primario se asigna automáticamente a los archivos creados.
-- Los grupos secundarios permiten ampliar permisos sin cambiar el grupo principal.
-- Los archivos `/etc/passwd`, `/etc/group` y `/etc/shadow` son críticos para la administración de usuarios.
