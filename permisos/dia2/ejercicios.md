@@ -17,7 +17,7 @@ El archivo ya no puede ser leído ni accedido por usuarios fuera del propietario
 
 ---------------------------------------------
 
-Ejercicio 2: Dar permisos específicos
+## Ejercicio 2: Dar permisos específicos
 
 chmod o+r ejemplo.txt
 
@@ -36,17 +36,18 @@ El archivo puede ser leído y ejecutado por cualquier usuario, pero no modificad
 
 sudo chown alice:developers ejemplo.txt
 ls -l ejemplo.txt
+
+
 Explicación:
-
 chown alice:developers asigna a alice como propietaria y al grupo developers.
-
 ls -l muestra el cambio en la columna de propietario y grupo.
 
 Resultado esperado:  
 El archivo pertenece a alice y al grupo developers.
 
+-------------------------------------------------
 
-Ejercicio 4: Setuid
+## Ejercicio 4: Setuid
 bash
 chmod u+s script_uid.sh
 ls -l script_uid.sh
