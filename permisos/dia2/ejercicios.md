@@ -1,84 +1,99 @@
 # Ejercicios Día 2 – Permisos Especiales
 
-## chmod avanzado
-1. Quitar permisos a grupo y otros:
+## Ejercicio 1: Quitar permisos a grupo y otros
+chmod g-r ejemplo.txt
+chmod o= ejemplo.txt
+Explicación:
 
-   chmod g-r ejemplo.txt
+g-r quita el permiso de lectura al grupo.
 
-   chmod o= ejemplo.txt
+o= elimina todos los permisos para “otros”.
 
-   -----------------------------------------
+Resultado esperado:  
+El archivo ya no puede ser leído ni accedido por usuarios fuera del propietario.
 
-2. Dar permisos específicos:
 
-   chmod o+r ejemplo.txt
+Ejercicio 2: Dar permisos específicos
+bash
+chmod o+r ejemplo.txt
+chmod o+x ejemplo.txt
+Explicación:
 
-   chmod o+x ejemplo.txt
+o+r da permiso de lectura a otros.
 
-   chown y chgrp
+o+x permite ejecución a otros.
 
-------------------------------------------
+Resultado esperado:  
+El archivo puede ser leído y ejecutado por cualquier usuario, pero no modificado.
 
-3. Cambiar propietario y grupo:
+Ejercicio 3: Cambiar propietario y grupo
+bash
+sudo chown alice:developers ejemplo.txt
+ls -l ejemplo.txt
+Explicación:
 
-   sudo chown alice:developers ejemplo.txt
+chown alice:developers asigna a alice como propietaria y al grupo developers.
 
-   ls -l ejemplo.txt
+ls -l muestra el cambio en la columna de propietario y grupo.
 
-------------------------------------------
+Resultado esperado:  
+El archivo pertenece a alice y al grupo developers.
 
-4. Setuid
-Crear un script y activar setuid:
 
-   chmod u+s script_uid.sh
+Ejercicio 4: Setuid
+bash
+chmod u+s script_uid.sh
+ls -l script_uid.sh
+Explicación:  
+El bit SUID hace que el script se ejecute con los permisos del propietario, no del usuario que lo corre.
 
-   ls -l script_uid.sh
+Resultado esperado:  
+El permiso aparece como -rwsr-xr-x (la s en lugar de la x del propietario).
 
------------------------------------------
 
-5. Setgid
-Crear directorio grupo_demo y activar setgid:
+Ejercicio 5: Setgid
+bash
+mkdir grupo_demo
+chmod g+s grupo_demo
+ls -ld grupo_demo
+Explicación:  
+El bit SGID en un directorio hace que los archivos creados dentro hereden el grupo del directorio.
 
-   mkdir grupo_demo
+Resultado esperado:  
+El permiso aparece como drwxr-sr-x.
+Al crear un archivo dentro, su grupo será automáticamente developers.
 
-   chmod g+s grupo_demo
 
-   ls -ld grupo_demo
+Ejercicio 6: Sticky Bit
+bash
+mkdir sticky_demo
+chmod 777 sticky_demo
+chmod +t sticky_demo
+ls -ld sticky_demo
+Explicación:  
+El Sticky Bit evita que un usuario borre archivos de otros dentro de un directorio compartido.
 
-------------------------------------------
+Resultado esperado:  
+El permiso aparece como drwxrwxrwt.
+Solo el propietario de un archivo puede borrarlo, aunque otros tengan permisos de escritura.
 
-6. Crear archivo dentro y verificar grupo:
 
-   cd grupo_demo
+Ejercicio 7: Prueba con usuarios distintos
+bash
+cd sticky_demo
+touch archivo_labs.txt
 
-   touch archivo.txt
+su bob
+cd /ruta/a/sticky_demo
+touch archivo_bob.txt
+rm archivo_labs.txt   # “Operation not permitted”
+Explicación:  
+El usuario bob puede crear su propio archivo, pero no puede borrar el archivo creado por labs.
 
-   ls -l archivo.txt
 
------------------------------------------
 
-7. Sticky Bit
-Crear directorio sticky_demo y activar sticky bit:
+Resultado esperado:  
+El sistema devuelve el error:
 
-   mkdir sticky_demo
-
-   chmod 777 sticky_demo
-
-   chmod +t sticky_demo
-
-   ls -ld sticky_demo
-
--------------------------------------------
-
-8. Probar con usuarios distintos (labs y bob):
-
-   cd sticky_demo
-
-   touch archivo_labs.txt
-   
-## Ejercicio 8 terminado
-
-   su bob
-   cd /ruta/a/sticky_demo
-   touch archivo_bob.txt
-   rm archivo_labs.txt   # “Operation not permitted”
+Code
+rm: cannot remove 'archivo_labs.txt': Operation not permitted
