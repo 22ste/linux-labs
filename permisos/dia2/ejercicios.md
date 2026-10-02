@@ -18,20 +18,22 @@ El archivo ya no puede ser leído ni accedido por usuarios fuera del propietario
 ---------------------------------------------
 
 Ejercicio 2: Dar permisos específicos
-bash
+
 chmod o+r ejemplo.txt
+
 chmod o+x ejemplo.txt
+
 Explicación:
-
 o+r da permiso de lectura a otros.
-
 o+x permite ejecución a otros.
 
 Resultado esperado:  
 El archivo puede ser leído y ejecutado por cualquier usuario, pero no modificado.
 
-Ejercicio 3: Cambiar propietario y grupo
-bash
+----------------------------------------------
+
+## Ejercicio 3: Cambiar propietario y grupo
+
 sudo chown alice:developers ejemplo.txt
 ls -l ejemplo.txt
 Explicación:
