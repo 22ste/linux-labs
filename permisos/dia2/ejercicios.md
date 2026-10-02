@@ -6,11 +6,13 @@ chmod g-r ejemplo.txt
 
 chmod o= ejemplo.txt
 
+
 Explicación:
 
 g-r quita el permiso de lectura al grupo.
 
 o= elimina todos los permisos para “otros”.
+
 
 Resultado esperado:  
 El archivo ya no puede ser leído ni accedido por usuarios fuera del propietario.
@@ -23,11 +25,13 @@ chmod o+r ejemplo.txt
 
 chmod o+x ejemplo.txt
 
+
 Explicación:
 
 o+r da permiso de lectura a otros.
 
 o+x permite ejecución a otros.
+
 
 Resultado esperado:  
 El archivo puede ser leído y ejecutado por cualquier usuario, pero no modificado.
