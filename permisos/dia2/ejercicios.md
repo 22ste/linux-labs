@@ -3,10 +3,9 @@
 ## Ejercicio 1: Quitar permisos a grupo y otros
 chmod g-r ejemplo.txt
 chmod o= ejemplo.txt
+
 Explicación:
-
 g-r quita el permiso de lectura al grupo.
-
 o= elimina todos los permisos para “otros”.
 
 Resultado esperado:  
