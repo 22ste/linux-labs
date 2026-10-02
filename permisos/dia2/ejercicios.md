@@ -7,36 +7,48 @@
 
    chmod o= ejemplo.txt
    
-3. Dar permisos específicos:
+
+2. Dar permisos específicos:
 
    chmod o+r ejemplo.txt
+
    chmod o+x ejemplo.txt
+
    chown y chgrp
 
 
-5. Cambiar propietario y grupo:
+3. Cambiar propietario y grupo:
+
    sudo chown alice:developers ejemplo.txt
+
    ls -l ejemplo.txt
 
-6. Setuid
+
+4. Setuid
 Crear un script y activar setuid:
+
    chmod u+s script_uid.sh
+
    ls -l script_uid.sh
 
-7. Setgid
+
+5. Setgid
 Crear directorio grupo_demo y activar setgid:
+
    mkdir grupo_demo
+
    chmod g+s grupo_demo
+
    ls -ld grupo_demo
 
 
-8. Crear archivo dentro y verificar grupo:
+6. Crear archivo dentro y verificar grupo:
 cd grupo_demo
 touch archivo.txt
 ls -l archivo.txt
 
 
-9. Sticky Bit
+10. Sticky Bit
 Crear directorio sticky_demo y activar sticky bit:
    mkdir sticky_demo
    chmod 777 sticky_demo
@@ -44,7 +56,7 @@ Crear directorio sticky_demo y activar sticky bit:
    ls -ld sticky_demo
 
 
-10. Probar con usuarios distintos (labs y bob):
+11. Probar con usuarios distintos (labs y bob):
    cd sticky_demo
    touch archivo_labs.txt
 
