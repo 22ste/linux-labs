@@ -26,11 +26,13 @@ chmod o+r ejemplo.txt
 chmod o+x ejemplo.txt
 
 
+
 Explicación:
 
 o+r da permiso de lectura a otros.
 
 o+x permite ejecución a otros.
+
 
 
 Resultado esperado:  
@@ -44,11 +46,13 @@ sudo chown alice:developers ejemplo.txt
 ls -l ejemplo.txt
 
 
+
 Explicación:
 
 chown alice:developers asigna a alice como propietaria y al grupo developers.
 
 ls -l muestra el cambio en la columna de propietario y grupo.
+
 
 Resultado esperado:  
 El archivo pertenece a alice y al grupo developers.
