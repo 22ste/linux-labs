@@ -1,16 +1,21 @@
 # Ejercicios Día 2 – Permisos Especiales
 
 ## Ejercicio 1: Quitar permisos a grupo y otros
+
 chmod g-r ejemplo.txt
+
 chmod o= ejemplo.txt
 
 Explicación:
+
 g-r quita el permiso de lectura al grupo.
+
 o= elimina todos los permisos para “otros”.
 
 Resultado esperado:  
 El archivo ya no puede ser leído ni accedido por usuarios fuera del propietario.
 
+---------------------------------------------
 
 Ejercicio 2: Dar permisos específicos
 bash
