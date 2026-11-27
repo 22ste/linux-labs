@@ -8,4 +8,4 @@ Laboratorios de Linux enfocados en permisos, seguridad y administración básica
 4. [Procesos y servicios](procesos-servicios/README.md)
 5. [Seguridad básica del sistema](seguridad-basica/README.md)
 6. [Archivos, búsqueda y auditoría](archivos-busqueda-auditoria/README.md)
-7. [Proyecto final](scripts/README.md)
+
