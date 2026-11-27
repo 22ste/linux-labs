@@ -1,6 +1,6 @@
 # Día 6: Archivos, Búsqueda y Auditoría
 
-## Ejercicio 1: Búsqueda de archivos con find
+# Ejercicio 1: Búsqueda de archivos con find
 
 ## Comandos
 
@@ -45,7 +45,7 @@ Identificar archivos modificados recientemente.
 
 --------------------------------------------------
 
-## Ejercicio 2: Localización de archivos y comandos
+# Ejercicio 2: Localización de archivos y comandos
 
 ## Comandos
 
@@ -102,7 +102,7 @@ grep es una de las herramientas más utilizadas en Linux para analizar archivos 
 
 --------------------------------------------------
 
-## Ejercicio 4: Visualización de archivos
+# Ejercicio 4: Visualización de archivos
 
 ## Comandos
 
@@ -139,13 +139,13 @@ Estas herramientas facilitan la revisión de archivos de configuración, registr
 
 --------------------------------------------------
 
-## Ejercicio 5: Conteo y análisis de información
+# Ejercicio 5: Conteo y análisis de información
 
-# Objetivo
+## Objetivo
 
 Aprender a obtener estadísticas básicas de archivos de texto.
 
-# Comandos
+## Comandos
 
 wc /etc/passwd
 
@@ -155,7 +155,7 @@ wc -w /etc/passwd
 
 wc -c /etc/passwd
 
-# Explicación
+## Explicación
 
 El comando wc permite obtener estadísticas sobre archivos de texto.
 
@@ -167,7 +167,7 @@ wc -w muestra únicamente el número de palabras.
 
 wc -c muestra únicamente el número de caracteres.
 
-# Resultado esperado
+## Resultado esperado
 
 Obtener la cantidad de líneas contenidas en un archivo.
 
@@ -176,14 +176,15 @@ Determinar el número de palabras presentes en un archivo.
 Conocer el número de caracteres de un archivo.
 
 -------------------------------------------------------------------
+------------------------------------------------------------------
 
-## Ejercicio 6: Ordenar y eliminar duplicados
+# Ejercicio 6: Ordenar y eliminar duplicados
 
-# Objetivo
+## Objetivo
 
 Aprender a organizar información y eliminar datos repetidos.
 
-# Comandos
+## Comandos
 
 sort /etc/passwd
 
@@ -193,7 +194,7 @@ cut -d ":" -f1 /etc/passwd | sort
 
 cut -d ":" -f1 /etc/passwd | sort | uniq
 
-# Explicación
+## Explicación
 
 Estos comandos permiten procesar información contenida en archivos de texto.
 
@@ -205,7 +206,7 @@ uniq elimina líneas repetidas.
 
 Las tuberías (|) permiten combinar comandos para procesar información de manera más eficiente.
 
-# Resultado esperado
+## Resultado esperado
 
 Ordenar datos alfabéticamente.
 
@@ -218,20 +219,21 @@ Aprendizaje obtenido
 Durante este ejercicio se aprendió a combinar herramientas de procesamiento de texto para organizar y analizar información de manera eficiente.
 
 ------------------------------------------------------------------------
+------------------------------------------------------------------------
 
-## Ejercicio 7: Monitoreo de archivos en tiempo real
+# Ejercicio 7: Monitoreo de archivos en tiempo real
 
-# Objetivo
+## Objetivo
 
 Aprender a supervisar eventos y cambios del sistema en tiempo real.
 
-# Comandos
+## Comandos
 
 tail -f /var/log/syslog
 
 journalctl -f
 
-# Explicación
+## Explicación
 
 Estos comandos permiten observar información conforme se genera en el sistema.
 
@@ -241,7 +243,7 @@ journalctl -f muestra nuevos eventos gestionados por systemd.
 
 La opción -f significa follow (seguir), permitiendo visualizar nuevos eventos a medida que ocurren.
 
-# Resultado esperado
+## Resultado esperado
 
 Monitorear eventos del sistema en tiempo real.
 
@@ -250,14 +252,15 @@ Observar cambios en archivos de registro.
 Detectar errores o eventos importantes conforme ocurren.
 
 --------------------------------------------------------------
+--------------------------------------------------------------
 
-## Ejercicio 8: Auditoría básica del sistema
+# Ejercicio 8: Auditoría básica del sistema
 
-# Objetivo
+## Objetivo
 
 Aprender a realizar tareas básicas de auditoría utilizando herramientas de búsqueda y análisis de registros.
 
-# Comandos
+## Comandos
 
 find /var/log -name "*.log"
 
@@ -269,7 +272,7 @@ journalctl -p err
 
 find ~ -mt*me -7
 
-# Explicación
+## Explicación
 
 Estos comandos permiten localizar registrar importantes y analizar eventos r*cientes del sistema.
 
@@ -284,7 +287,7 @@ journalctl -p err muestra únicamente mensajes clasificaos como errores.
 
 find ~ -mtime *7 busca archivos modificados durante los últimos siete días.
 
-# Resultado esperado
+## Resultado esperado
 
 Identificar registros importantes.
 
@@ -296,6 +299,7 @@ Identificar archivos modificados durante la última semana.
 
 
 --------------------------------------------------------------------
+-------------------------------------------------------------------
 
 # Conclusión
 
